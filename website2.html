@@ -1,0 +1,1053 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <title>App Landing Page</title>
+<style type="text/css">
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  #myvideo
+  {
+    z-index:1;
+  }
+  #nav
+  {
+    z-index:2;
+    position:relative;
+    left:-200px;
+    width:180px;
+  }
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+  
+    header video {
+      display: none;
+    }
+  }
+  .hd
+  {
+    font-family: "Potta One"
+  }
+  .f
+  {
+    font-family:'Shadows Into Light';
+  }
+  .g
+  {
+    width:50px;;
+  }
+  #mdd
+  {
+   position:relative;
+   left:10px;
+
+  }
+  #con
+  {
+    position:relative;
+    left:-100px;
+    top:50px;
+  }
+  #hero
+  {
+    width: 100%;
+    height: 100vh;
+    
+    background-size: cover; 
+  }
+  .soc
+  {
+    padding-right:6px;
+  }
+
+  .main
+          {   width:500px;
+            height:400px;
+            background-color:white;
+            z-index:3;
+            border-radius: 5px;
+            padding:30px;
+            margin-top:30px;
+            background-image:url("https://wallpaperaccess.com/full/3025501.jpg") ;
+            border:2px firebrick solid;
+            opacity:0.9;
+          }
+          
+          #text1
+          {
+            font-family:'Dancing Script';
+            font-size:30px;
+          }
+          #gg
+           {
+            font-family:'Amatic SC';
+            font-size:30px;
+           }
+           #head
+           {
+            font-family: 'Amatic SC';
+            font-size:40px;
+            text-align:center;
+            padding-top:-20px;
+          
+           }
+
+           body{
+    margin-top:20px;
+    
+}
+#wer
+{
+   background-color: #eee;
+}
+
+.timeline {
+    width: 100%;
+    position: relative;
+    padding: 1px 0;
+    list-style: none;
+    font-weight: 500
+}
+
+.timeline .timeline-item {
+    padding-left: 0;
+    padding-right: 30px
+}
+
+.timeline .timeline-item.timeline-item-right,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-left) {
+    padding-left: 30px;
+    padding-right: 0
+}
+
+.timeline .timeline-item .timeline-event {
+    width: 100%
+}
+
+.timeline:before {
+    border-right-style: solid
+}
+
+.timeline:before,
+.timeline:after {
+    content: " ";
+    display: block
+}
+
+.timeline:after {
+    clear: both
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%!important;
+    margin-left: 2px;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: rgba(52, 40, 104, .1)
+}
+
+.timeline .timeline-label .label {
+    background-color: #e76c90;
+    border-radius: 35px;
+    color: #fff;
+    display: inline;
+    font-size: .85rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: .65rem 1.4rem;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap
+}
+
+.timeline.timeline-line-solid:before {
+    border-right-style: solid
+}
+
+.timeline.timeline-line-dotted:before {
+    border-right-style: dotted
+}
+
+.timeline.timeline-line-dashed:before {
+    border-right-style: dashed
+}
+
+.timeline .timeline-item {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 50%;
+    margin-bottom: 20px
+}
+
+.timeline .timeline-item:before,
+.timeline .timeline-item:after {
+    content: "";
+    display: table
+}
+
+.timeline .timeline-item:after {
+    clear: both
+}
+
+.timeline .timeline-item:last-child {
+    margin-bottom: 0!important
+}
+
+.timeline .timeline-item.timeline-item-right>.timeline-event,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-left)>.timeline-event {
+    float: right!important
+}
+
+.timeline .timeline-item.timeline-item-right>.timeline-event:before,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-left)>.timeline-event:before,
+.timeline .timeline-item.timeline-item-right>.timeline-event:after,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-left)>.timeline-event:after {
+    right: auto!important;
+    border-left-width: 0!important
+}
+
+.timeline .timeline-item.timeline-item-right>.timeline-event:before,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-left)>.timeline-event:before {
+    left: -15px!important;
+    border-right-width: 15px!important
+}
+
+.timeline .timeline-item.timeline-item-right>.timeline-event:after,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-left)>.timeline-event:after {
+    left: -14px!important;
+    border-right-width: 14px!important
+}
+
+.timeline .timeline-item>.timeline-event:before {
+    top: 10px;
+    right: -15px;
+    border-top: 15px solid transparent;
+    border-left-width: 15px;
+    border-left-style: solid;
+    border-right-width: 0;
+    border-right-style: solid;
+    border-bottom: 15px solid transparent
+}
+
+.timeline .timeline-item>.timeline-event:after {
+    top: 11px;
+    right: -14px;
+    border-top: 14px solid transparent;
+    border-left-width: 14px;
+    border-left-style: solid;
+    border-right-width: 0;
+    border-right-style: solid;
+    border-bottom: 14px solid transparent
+}
+
+.timeline .timeline-item>.timeline-point {
+    top: 25px
+}
+
+.timeline .timeline-item:nth-of-type(2) {
+    margin-top: 40px
+}
+
+.timeline .timeline-item.timeline-item-left,
+.timeline .timeline-item.timeline-item-right {
+    clear: both!important
+}
+
+.timeline .timeline-item.timeline-item-right,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-left) {
+    float: right;
+    clear: right
+}
+
+.timeline .timeline-item.timeline-item-right>.timeline-point,
+.timeline .timeline-item:nth-of-type(even):not(.timeline-item-left)>.timeline-point {
+    left: -14px
+}
+
+.timeline .timeline-item>.timeline-event {
+    position: relative;
+    float: left
+}
+
+.timeline .timeline-item>.timeline-event:before {
+    border-left-color: rgba(52, 40, 104, .04);
+    border-right-color: rgba(52, 40, 104, .04)
+}
+
+.timeline .timeline-item>.timeline-event:after {
+    border-left-color: rgba(52, 40, 104, .04);
+    border-right-color: rgba(52, 40, 104, .04)
+}
+
+.timeline .timeline-item>.timeline-event:before,
+.timeline .timeline-item>.timeline-event:after {
+    content: "";
+    display: inline-block;
+    position: absolute
+}
+
+.timeline .timeline-item>.timeline-point {
+    color: #5d5386;
+    background: #5d5386;
+    right: -14px;
+    width: 12px;
+    height: 12px;
+    margin-top: -6px;
+    margin-left: 8px;
+    margin-right: 8px;
+    position: absolute;
+    z-index: 100;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 100%;
+    line-height: 20px;
+    text-align: center;
+    box-shadow: 0 0 0 5px #f2f3f8
+}
+
+.timeline .timeline-label {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 50%;
+    margin-bottom: 20px;
+    top: 1px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    text-align: center
+}
+
+.timeline .timeline-label:before,
+.timeline .timeline-label:after {
+    content: "";
+    display: table
+}
+
+.timeline .timeline-label:after {
+    clear: both
+}
+
+.timeline .timeline-label:last-child {
+    margin-bottom: 0!important
+}
+
+.timeline .timeline-label + .timeline-item {
+    margin-top: 0
+}
+
+.timeline .timeline-label + .timeline-item + .timeline-item {
+    margin-top: 40px
+}
+
+.timeline .time-right {
+    color: rgba(52, 40, 104, .5);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: .85rem;
+    font-weight: 500
+}
+
+.timeline .time-left {
+    color: rgba(52, 40, 104, .5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: .85rem;
+    font-weight: 500
+}
+
+.timeline .widget-header .user-image {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1.07rem
+}
+
+.timeline .widget-header .user-image img {
+    width: 50px
+}
+
+.timeline .widget-header .title {
+    color: #2c304d;
+    font-size: 1rem
+}
+
+.timeline .widget-header .username {
+    color: #e76c90
+}
+
+.timeline .widget-header .time {
+    font-size: .85rem
+}
+
+.timeline .widget-body {
+    padding: 1rem 1.4rem
+}
+
+.timeline .widget-footer {
+    border-top: 1px solid #eee;
+    margin: 0 1.4rem;
+    padding: 1.07rem 0
+}
+
+.timeline .users-like {
+    padding: 0
+}
+
+.timeline .users-like a {
+    margin: 0 -1.6rem 0 0;
+    transition: all 0.4s ease
+}
+
+.timeline .users-like a:hover {
+    margin-right: -.3rem
+}
+
+.timeline .users-like img {
+    width: 40px;
+    border: .25rem solid #fff
+}
+
+.timeline .users-like a.view-more {
+    background: #5d5386;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border: .25rem solid #fff;
+    border-radius: 50%;
+    vertical-align: middle;
+    font-size: .85rem;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 0
+}
+
+.timeline .widget-footer .meta li {
+    display: inline-block;
+    margin-right: .5rem
+}
+
+.timeline .widget-footer .meta li:last-child {
+    margin-right: 0
+}
+
+.timeline .widget-footer .meta li a {
+    color: rgba(52, 40, 104, .3)
+}
+
+.timeline .widget-footer .meta li a:hover {
+    color: rgba(52, 40, 104, .9)
+}
+
+.timeline .widget-footer .meta li i {
+    font-size: 1.8rem;
+    vertical-align: middle;
+    margin-right: .3rem
+}
+
+.timeline .widget-footer .meta li .numb {
+    vertical-align: middle
+}
+
+@media screen and (max-width:768px) {
+    .timeline.timeline {
+        width: 100%;
+        max-width: 100%
+    }
+    .timeline.timeline .timeline-item {
+        padding-left: 72px;
+        padding-right: 0
+    }
+    .timeline.timeline .timeline-item.timeline-item-right,
+    .timeline.timeline .timeline-item:nth-of-type(even):not(.timeline-item-left) {
+        padding-left: 72px;
+        padding-right: 0
+    }
+    .timeline.timeline .timeline-item .timeline-event {
+        width: 100%
+    }
+    .timeline.timeline:before {
+        left: 42px;
+        width: 0;
+        margin-left: -1px
+    }
+    .timeline.timeline .timeline-item {
+        width: 100%;
+        margin-bottom: 20px
+    }
+    .timeline.timeline .timeline-item:nth-of-type(even) {
+        margin-top: 0
+    }
+    .timeline.timeline .timeline-item>.timeline-event {
+        float: right!important
+    }
+    .timeline.timeline .timeline-item>.timeline-event:before,
+    .timeline.timeline .timeline-item>.timeline-event:after {
+        right: auto!important;
+        border-left-width: 0!important
+    }
+    .timeline.timeline .timeline-item>.timeline-event:before {
+        left: -15px!important;
+        border-right-width: 15px!important
+    }
+    .timeline.timeline .timeline-item>.timeline-event:after {
+        left: -14px!important;
+        border-right-width: 14px!important
+    }
+    .timeline.timeline .timeline-item>.timeline-point {
+        transform: translateX(-50%);
+        left: 42px!important;
+        margin-left: 0
+    }
+    .timeline.timeline .timeline-label {
+        transform: translateX(-50%);
+        margin: 0 0 20px 42px
+    }
+    .timeline.timeline .timeline-label + .timeline-item + .timeline-item {
+        margin-top: 0
+    }
+    .timeline .time-right {
+        left: 0
+    }
+}
+
+
+.rounded-widget .widget {
+    border-radius: 4px
+}
+
+.rounded-widget .widget-image {
+    border-radius: 4px
+}
+
+.rounded-widget .widget-header {
+    border-radius: 4px 4px 0 0
+}
+
+.rounded-widget .widget-footer {
+    border-radius: 0 0 4px 4px
+}
+
+.widget {
+    background: #fff;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 30px
+}
+
+.widget-image {
+    background: #fff;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 30px;
+    position: relative
+}
+
+.widget-header {
+    background: #fff;
+    padding: .85rem 1.4rem;
+    position: relative;
+    width: 100%
+}
+
+.widget-header.bordered {
+    border-bottom: .07rem solid #eee
+}
+
+.widget-header.no-actions {
+    padding: 1.49rem
+}
+
+.widget-options .dropdown-toggle {
+    color: #98a8b4;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1.7rem;
+}
+
+.widget-header h1,
+.widget-header h2,
+.widget-header h3,
+.widget-header h4,
+.widget-header h5,
+.widget-header h6 {
+    color: #2c304d;
+    margin-bottom: 0
+}
+
+.section-title h1,
+.section-title h2,
+.section-title h3,
+.section-title h4,
+.section-title h5,
+.section-title h6 {
+    color: #2c304d;
+    font-weight: 600;
+    margin-bottom: 0
+}
+
+.widget-header h2 {
+    color: #2c304d;
+    font-size: 1.2rem;
+    display: table-cell;
+    vertical-align: middle;
+    margin-right: auto
+}
+
+.widget-header h2 i {
+    color: #aea9c3;
+    font-size: 1.8rem;
+    padding-right: .5rem;
+    vertical-align: middle
+}
+
+.widget-body {
+    padding: 1.4rem
+}
+
+.widget-image-footer {
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.2rem 0;
+    z-index: 1
+}
+
+.widget-footer {
+    background: #fff;
+    padding: 1rem 1.07rem;
+    position: relative
+}
+
+.widget-footer.big {
+    padding: 2.1rem 1.07rem
+}
+
+.no-border {
+    border: 0 none!important;
+}
+
+.no-bg {
+    background: none!important;
+}
+#fr
+     {
+        background-color: aqua;
+    padding-top: 150px;
+    margin-top: 50px;
+    text-align: center;
+    padding-bottom: 150px;
+}
+</style>
+  </head>
+<body>
+<header>
+           <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <nav class="navbar  navbar-dark bg-dark" id="nav">                
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link " href="#gg">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#wer">Journey</a>
+                      </li>
+                      
+                      <li class="nav-item nav-link">Contact us:</li>
+                        <div class="social-links mt-3 text-center" > 
+                          <a href="#" class="twitter soc"><i class="fa fa-twitter"></i></a> 
+                          <a href="#" class="facebook soc"><i class="fa fa-facebook"></i></a> 
+                          <a href="#" class="instagram soc"><i class="fa fa-instagram"></i></a>
+                           <a href="#" class="google-plus soc"><i class="fa fa-skype"></i></a> 
+                           <a href="#" class="linkedin soc"><i class="fa fa-linkedin"></i></a>
+                          </div>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#fr">Download</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">9656xxxxx</a>
+                            </div>
+                          </li>
+                    </ul>
+                    
+                  </div>
+                </nav>
+              </div>
+
+
+              
+
+
+
+
+              <div class="col-md-8">
+                <div class="overlay">
+          
+                <!-- The HTML5 video element that will create the background video on the header -->
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="myVideo">
+                  <source src="cotton.mp4" type="video/mp4">
+                </video>
+              </div>
+                <!-- The header content -->
+                <div class="container h-100">
+                  <div class="d-flex h-100 text-center align-items-center">
+                    <div class="w-100 text-white" id="con">
+                      <h1 class="display-3 hd">Beginning of the better you!!</h1>
+                      <p class="lead mb-0 f">The world is here, where are you?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            
+      
+</header>
+  <!-- Page section example for content below the video header -->
+  <section class="my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <p id="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="mdd">
+    <h2 id="head">Coding</h2>
+    <hr>
+    <hr>
+    <p id="gg">Code tells a computer what actions to take, and writing code is like creating a set of instructions. By learning to write code, you can tell computers what to do or how to behave in a much faster way.</p>
+    <hr>
+    <hr>
+   </div>
+<div class="container">
+   <div class="row justify-content-center" id="wer">
+       <div class="col-xl-10 col-12">
+           <div class="timeline timeline-line-solid">
+               <span class="timeline-label">
+                   <span class="label">Journey</span>
+               </span>
+               <div class="timeline-item">
+                   <div class="timeline-point timeline-point"></div>
+                   <div class="timeline-event">
+                       <div class="widget has-shadow">
+                           <div class="widget-header d-flex align-items-center">
+                               <div class="user-image">
+                                   <img class="rounded-circle" src="https://ak.picdn.net/shutterstock/videos/34728547/thumb/5.jpg" alt="...">
+                               </div>
+                               <div class="d-flex flex-column mr-auto">
+                                   <div class="title">
+                                       <span class="username">Automobile Works</span>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="widget-body">
+                               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+                                   </p>
+                           </div>
+                           <div class="widget-footer d-flex align-items-center">
+                               <div class="col-xl-8 col-md-8 col-7 no-padding d-flex justify-content-start">
+                                   <div class="users-like">
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                   </div>
+                               </div>
+                               <div class="col-xl-4 col-md-4 col-5 no-padding d-flex justify-content-end">
+                                   <div class="meta">
+                                       <ul>
+                                           <li><a href="#"><i class="fa fa-comment"></i><span class="numb">12</span></a></li>
+                                           <li><a href="#"><i class="fa fa-heart"></i><span class="numb">30</span></a></li>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="time-right">30 min ago</div>
+                   </div>
+               </div>
+
+               <div class="timeline-item">
+                   <div class="timeline-point timeline-point"></div>
+                   <div class="timeline-event">
+                       <div class="widget has-shadow">
+                           <div class="widget-header d-flex align-items-center">
+                               <div class="user-image">
+                                   <img class="rounded-circle" src="https://cdn.pixabay.com/photo/2016/08/31/11/55/icon-1633250_960_720.png" alt="...">
+                               </div>
+                               <div class="d-flex flex-column mr-auto">
+                                   <div class="title">
+                                       <span class="username">Swastika Pandey</span> posted an image
+                                   </div>
+                               </div>
+                              
+                           </div>
+
+                           <div class="widget-body">
+                               <div class="content-img">
+                                   <a href="#"><img src="https://img.freepik.com/free-photo/colorful-people-collage-design_23-2149450427.jpg?w=2000" class="img-fluid" alt="..."></a>
+                               </div>
+                           </div>
+
+                           <div class="widget-footer d-flex align-items-center">
+                               <div class="col no-padding d-flex justify-content-start">
+                                   <div class="users-like">
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                   </div>
+                               </div>
+                               <div class="col no-padding d-flex justify-content-end">
+                                   <div class="meta">
+                                       <ul>
+                                           <li><a href="#"><i class="fa fa-comment"></i><span class="numb">38</span></a></li>
+                                           <li><a href="#"><i class="fa fa-heart"></i><span class="numb">94</span></a></li>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="time-left">10 min ago</div>
+                   </div>
+               </div>
+
+               <div class="timeline-item">
+                   <div class="timeline-point timeline-point" style="background-color:black; color: #00aced;"></div>
+                   <div class="timeline-event">
+                       <div class="widget icon-widget has-shadow" style="background-color: blanchedalmond;">
+                           <div class="widget-body" style="color: #fff;">
+                               <div class="media">
+                                   <div class="media-left align-self-center">
+                                       <i class="la la-twitter" style="font-size: 4rem;"></i>
+                                   </div>
+                                   <div class="media-body align-self-center pl-4">
+                                       At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</div>
+                               </div>
+                           </div>
+                           <div class="widget-footer no-bg no-border pt-0 d-flex justify-content-end">
+                               <div class="meta" style="font-size: 0.85rem;">
+                                   <ul>
+                                       <li><a href="#"><i class="fa fa-heart"></i><span class="numb">38</span></a></li>
+                                       <li><a href="#"><i class="fa fa-retweet"></i><span class="numb">94</span></a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="time-right">48 min ago</div>
+                   </div>
+               </div>
+
+               <div class="timeline-item">
+                   <div class="timeline-point timeline-point"></div>
+                   <div class="timeline-event">
+                       <div class="widget icon-widget has-shadow">
+                           <div class="widget-body">
+                               <div class="media">
+                                   <div class="media-left align-self-center mr-3">
+                                       <a href="#">
+                                           <img src="https://bootdey.com/img/Content/avatar/avatar2.png" style="width: 50px;" class="img-fluid rounded-circle" alt="...">
+                                       </a>
+                                   </div>
+                                   <div class="media-body align-self-center">
+                                       Went to build the organisation together
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="time-left">47 min ago</div>
+                   </div>
+               </div>
+
+               <div class="timeline-item">
+                   <div class="timeline-point timeline-point"></div>
+                   <div class="timeline-event">
+                       <div class="widget widget-08 has-shadow">
+                           <div class="widget-body">
+                               <div class="today">
+                                   <div class="title">Todo</div>
+                                   <div class="new-tasks"><span class="nb">2</span> new tasks</div>
+                               </div>
+                               <div class="todo-list">
+                                   <ul id="sortable" class="list">
+                                       <li class="task-color task-violet">
+                                           <div class="styled-checkbox">
+                                               <input type="checkbox" id="check-1">
+                                               <label class="text-primary" for="check-1">Think before you leap</label>
+                                           </div>
+                                       </li>
+                                       <li class="task-color task-blue">
+                                           <div class="styled-checkbox">
+                                               <input type="checkbox" id="check-2">
+                                               <label class="text-info" for="check-2">Practise makes a aman perfect</label>
+                                           </div>
+                                       </li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="time-right">50 min ago</div>
+                   </div>
+               </div>
+               <span class="timeline-label">
+                   <span class="label">March</span>
+               </span>
+
+               <div class="timeline-item">
+                   <div class="timeline-point timeline-point"></div>
+                   <div class="timeline-event">
+                       <div class="widget has-shadow">
+                           <div class="alert alert-success" role="alert">
+                               <strong>Hey!</strong> This is a success landing of our work
+                           </div>
+                       </div>
+                       <div class="time-right">30 March</div>
+                   </div>
+               </div>
+
+               <div class="timeline-item">
+                   <div class="timeline-point timeline-point" style="background-color: #cc181e; color: #cc181e;"></div>
+                   <div class="timeline-event">
+                       <div class="widget icon-widget has-shadow">
+                           <div class="widget-body">
+                               <div class="media">
+                                   <div class="media-left align-self-center">
+                                       <i class="fa fa-youtube" style="font-size: 4rem; color: #cc181e;"></i>
+                                   </div>
+                                   <div class="media-body align-self-center pl-4">
+                                       New video posted
+                                       <h3>Walking through times</h3>
+                                       <a href="https://www.udemy.com/">https://www.udemy.com/</a>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div class="widget-footer no-bg no-border pt-0 d-flex justify-content-end">
+                               <div class="meta" style="font-size: 0.85rem;">
+                                   <ul>
+                                       <li><a href="#"><i class="fa fa-comments"></i><span class="numb">38</span></a></li>
+                                       <li><a href="#"><i class="fa fa-thumbs-o-up"></i><span class="numb">124</span></a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="time-right">38 min ago</div>
+                   </div>
+               </div>
+               <span class="timeline-label">
+                   <span class="label bg-primary">Load More</span>
+               </span>
+           </div>
+       </div>
+   </div>
+</div>
+
+<div class="row" id="fr">
+   <div class="col-lg-12">
+     <h2>Download the App</h2>
+     <p >Why to wait, just download it!!</p>
+     <p ><a href="#"><img src="https://eco-cdn.co.uk/webdeveloper2.0/content/5-bootstrap/App-Store-Icon.png" width="100px" height="50px"></a></p>
+   </div>
+</div>
+  <script type="text/javascript">
+  
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
